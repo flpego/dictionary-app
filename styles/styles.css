@@ -1,15 +1,224 @@
-.principal-section {
-    width: 50%;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;700&family=Montserrat:wght@100;300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #F3F3F3;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+span {
+  font-weight: 500;
+  color: #0766AD;
+}
+
+.principal-section h1{
+  color: blue;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.dicc-form form {
+  display: flex;
+  justify-content: center;
+}
+
+.dicc-form form input {
+  width: 50%;
+  padding: .8rem 1rem ;
+  margin-inline-end: 1rem;
+  border-radius: 5px;
+  border: 1px solid #0766AD;
+}
+
+.dicc-form form input:focus {
+  font-size: 1rem;
+  border: 1px solid #0766AD;
+  outline: 2px solid #C5E898;
+
 }
 
 
-.results-container h4{
-    font-size: 1.5rem;
-    display: block;
+.search-btn-container{
+  position: relative;
+}
+
+.search-btn-container i{
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  color: #F3F3F3;
+}
+
+
+
+#search-button {
+  padding: .8rem 2rem .8rem .5rem;
+  background-color: #0766AD;
+  border-radius: 5px;
+  color: #F3F3F3;
+}
+
+ #search-button:hover{
+  background-color: #C5E898;
+  box-shadow: 2px 3px 10px #0766AD;
+
+  color: #0766AD;
+  font-weight: 700;
+  transform: scale(1.1);
+
+}
+
+.definitions-container{
+  background: #F3F3F3;
+  padding: 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.results-container {
+  width: 90%;
+  margin: 3rem auto;
+}
+
+.results-container h4 {
+  font-size: 1.5rem;
+  display: block;
 }
 
 .word-header-container {
-    display: flex;
-    justify-content: space-around;
+  width: 50%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block-end: .5rem;
+  border-bottom: 1px solid #0766AD;
 }
 
+.word-header-container p {
+  margin-inline: 2rem;
+}
+
+.synonym-container {
+  margin: 2rem 1rem;
+  border-radius: 10px;
+  background: #C5E898;
+  box-shadow: 2px 2px 25px yellowgreen;
+}
+.synonym-container h4 {
+  text-align: initial;
+  margin-inline-start: 3rem;
+  padding: 1rem;
+}
+
+.synonym-container ul {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.synonym-container ul li {
+  background: greenyellow;
+  border-radius: 10px;
+  margin: 0.5rem auto;
+  padding: 0.8rem;
+}
+
+.synonym-link{
+  text-decoration: none;
+  color: #0766AD;
+  padding: .2rem;
+  font-weight: 700;
+}
+
+.synonym-container ul li:hover{
+  background-color: #00ff2a;
+  box-shadow: 2px 3px 10px #0766AD;
+}
+
+.synonym-container ul li a:hover{
+  color: #000;
+
+}
+
+.def-grid {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  gap: 1rem;
+  align-items: center;
+  font-size: .9rem;
+  border-radius: 20px;
+  box-shadow: 1px 1px 15px #0766AD;
+}
+
+.def-grid h4 {
+  text-align: center;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.def-grid ul li {
+  padding: 0.5rem 1rem;
+  list-style: decimal;
+}
+
+.def-grid ul li:nth-child(odd){
+  border-radius: 5px;
+  border-bottom: 1px solid #0766AD;
+} 
+
+.noun ,.preposition {
+  background: rgba(218, 165, 32, 0.937);
+}
+
+.verb,.conjunction  {
+  background: rgb(44, 184, 44);
+}
+
+.adjective {
+  background: yellowgreen;
+}
+
+.adverb {
+  background: rgba(222, 222, 2, 0.719)
+}
+
+
+.play-button {
+  background: yellow;
+  border-radius: 100vmax;
+  padding: 0.5rem 1rem;
+}
+.play-button:hover {
+  background: greenyellow;
+  box-shadow: 2px 3px 10px #0766AD;
+
+}
+
+.play-button i {
+  margin-inline-start: 1rem;
+  
+}
