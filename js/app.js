@@ -58,7 +58,7 @@ function renderResults(inputWord, data) {
   <button class="play-button" onclick="playSound()">Listen<i class="fa-solid fa-volume-high"></i></button>
 </div>
 
-<div class="definitions-container">
+<div class="definitions-container bg-svg">
 </div>
 
 <div class="synonym-container">

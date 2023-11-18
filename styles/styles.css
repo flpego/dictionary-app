@@ -9,7 +9,9 @@
 }
 
 body {
-  background-color: #F3F3F3;
+  background: linear-gradient(#c1e4ff, #000);
+  background-repeat: no-repeat;
+  min-height: 100vmax;
 }
 
 li {
@@ -23,10 +25,10 @@ button {
 
 span {
   font-weight: 500;
-  color: #0766AD;
+  color: #000;
 }
 
-.principal-section h1{
+.principal-section h1 {
   color: blue;
   padding: 1rem;
   margin: 1rem;
@@ -40,53 +42,49 @@ span {
 
 .dicc-form form input {
   width: 50%;
-  padding: .8rem 1rem ;
+  padding: 0.8rem 1rem;
   margin-inline-end: 1rem;
   border-radius: 5px;
-  border: 1px solid #0766AD;
+  border: 1px solid #0766ad;
 }
 
 .dicc-form form input:focus {
   font-size: 1rem;
-  border: 1px solid #0766AD;
-  outline: 2px solid #C5E898;
-
+  border: 1px solid #0766ad;
+  outline: 2px solid #c5e898;
 }
 
-
-.search-btn-container{
+.search-btn-container {
   position: relative;
 }
 
-.search-btn-container i{
+.search-btn-container i {
   position: absolute;
   top: 50%;
   right: 8px;
   transform: translateY(-50%);
-  color: #F3F3F3;
+  color: #f3f3f3;
 }
-
-
 
 #search-button {
-  padding: .8rem 2rem .8rem .5rem;
-  background-color: #0766AD;
+  padding: 0.8rem 2rem 0.8rem 0.5rem;
+  background-color: #0766ad;
   border-radius: 5px;
-  color: #F3F3F3;
+  color: #f3f3f3;
 }
 
- #search-button:hover{
-  background-color: #C5E898;
-  box-shadow: 2px 3px 10px #0766AD;
+#search-button:hover {
+  background-color: #c5e898;
+  box-shadow: 2px 3px 10px #0766ad;
 
-  color: #0766AD;
+  color: #0766ad;
   font-weight: 700;
   transform: scale(1.1);
-
 }
 
-.definitions-container{
-  background: #F3F3F3;
+.definitions-container {
+  background: linear-gradient(#c1e4ff, #000);
+  background-repeat: no-repeat;
   padding: 2rem;
   border-radius: 10px;
   display: flex;
@@ -110,19 +108,26 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block-end: .5rem;
-  border-bottom: 1px solid #0766AD;
+  padding-block-end: 0.5rem;
+  border-bottom: 1px solid #0766ad;
+}
+
+.word-header-container h4{
+  color: #000;
 }
 
 .word-header-container p {
-  margin-inline: 2rem;
+  margin-inline: 1rem;
+  background-color: #00ff2a9c;
+  padding: .3rem;
+  border-radius: 100vmax;
 }
 
 .synonym-container {
   margin: 2rem 1rem;
   border-radius: 10px;
-  background: #C5E898;
-  box-shadow: 2px 2px 25px yellowgreen;
+  background: #c5e898;
+  box-shadow: -2px 2px 8px yellowgreen;
 }
 .synonym-container h4 {
   text-align: initial;
@@ -146,21 +151,20 @@ span {
   padding: 0.8rem;
 }
 
-.synonym-link{
+.synonym-link {
   text-decoration: none;
-  color: #0766AD;
-  padding: .2rem;
+  color: #0766ad;
+  padding: 0.2rem;
   font-weight: 700;
 }
 
-.synonym-container ul li:hover{
+.synonym-container ul li:hover {
   background-color: #00ff2a;
-  box-shadow: 2px 3px 10px #0766AD;
+  box-shadow: 2px 3px 10px #0766ad;
 }
 
-.synonym-container ul li a:hover{
+.synonym-container ul li a:hover {
   color: #000;
-
 }
 
 .def-grid {
@@ -169,9 +173,9 @@ span {
   grid-template-columns: 2fr 6fr;
   gap: 1rem;
   align-items: center;
-  font-size: .9rem;
+  font-size: 0.9rem;
   border-radius: 20px;
-  box-shadow: 1px 1px 15px #0766AD;
+  box-shadow: 1px 1px 15px #0766ad;
 }
 
 .def-grid h4 {
@@ -185,16 +189,18 @@ span {
   list-style: decimal;
 }
 
-.def-grid ul li:nth-child(odd){
+.def-grid ul li:nth-child(odd) {
   border-radius: 5px;
-  border-bottom: 1px solid #0766AD;
-} 
+  border-bottom: 1px solid #0766ad;
+}
 
-.noun ,.preposition {
+.noun,
+.preposition {
   background: rgba(218, 165, 32, 0.937);
 }
 
-.verb,.conjunction  {
+.verb,
+.conjunction {
   background: rgb(44, 184, 44);
 }
 
@@ -203,9 +209,8 @@ span {
 }
 
 .adverb {
-  background: rgba(222, 222, 2, 0.719)
+  background: rgba(222, 222, 2, 0.719);
 }
-
 
 .play-button {
   background: yellow;
@@ -214,11 +219,44 @@ span {
 }
 .play-button:hover {
   background: greenyellow;
-  box-shadow: 2px 3px 10px #0766AD;
-
+  box-shadow: 2px 3px 10px #0766ad;
 }
 
 .play-button i {
   margin-inline-start: 1rem;
-  
+}
+
+@media screen and (max-width: 768px) {
+  .principal-section {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .dicc-form form {
+    flex-direction:column ;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .dicc-form form input {
+    width: 90%;
+    margin-inline: auto ;
+  }
+
+  .results-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+  .word-header-container {
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  .def-grid {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
